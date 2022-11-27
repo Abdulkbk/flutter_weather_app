@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app/pages/home_page.dart';
+import 'package:weather_app/pages/loading_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       // Routes
       initialRoute: '/',
       getPages: [
-        GetPage(name: '/', page: () => const HomePage())
+        GetPage(name: '/', page: () => const LoadingPage()),
+        GetPage(name: '/home', page: () => const HomePage()),
       ],
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
